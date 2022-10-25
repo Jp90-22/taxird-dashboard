@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // Icons
@@ -13,6 +13,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 
 export default function Sidebar() {
+  const [activeLink, setActiveLink] = useState(0);
+
   return (
     <>
       <Section>
@@ -28,37 +30,55 @@ export default function Sidebar() {
 
           <div className="links">
             <ul>
-              <li>
+              <li
+                className={activeLink === 0 ? "active" : null}
+                onClick={() => setActiveLink(0)}
+              >
                 <a href="#">
                   <MdSpaceDashboard />
                   <span> Dashboard</span>
                 </a>
               </li>
-              <li>
+              <li
+                className={activeLink === 1 ? "active" : null}
+                onClick={() => setActiveLink(1)}
+              >
                 <a href="#">
                   <RiDashboard2Fill />
                   <span> Riders</span>
                 </a>
               </li>
-              <li>
+              <li
+                className={activeLink === 2 ? "active" : null}
+                onClick={() => setActiveLink(2)}
+              >
                 <a href="#">
                   <FaAddressCard />
                   <span> Payment Details</span>
                 </a>
               </li>
-              <li>
+              <li
+                className={activeLink === 3 ? "active" : null}
+                onClick={() => setActiveLink(3)}
+              >
                 <a href="#">
                   <GiTwirlCenter />
                   <span> Learning Center</span>
                 </a>
               </li>
-              <li>
+              <li
+                className={activeLink === 4 ? "active" : null}
+                onClick={() => setActiveLink(4)}
+              >
                 <a href="#">
                   <BsFillChatTextFill />
                   <span> FAQs</span>
                 </a>
               </li>
-              <li>
+              <li
+                className={activeLink === 5 ? "active" : null}
+                onClick={() => setActiveLink(5)}
+              >
                 <a href="#">
                   <IoSettings />
                   <span> Settings</span>
