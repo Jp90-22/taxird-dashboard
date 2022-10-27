@@ -12,6 +12,10 @@ import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 
+/**
+ * Sidebar styled
+ * @returns Sidebar component
+ */
 export default function Sidebar() {
   const [activeLink, setActiveLink] = useState(0);
 
@@ -98,6 +102,9 @@ export default function Sidebar() {
   );
 }
 
+/**
+ * Section styled component
+ */
 const Section = styled.section`
   position: fixed;
   left: 0;
