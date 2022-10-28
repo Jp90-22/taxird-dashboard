@@ -13,7 +13,7 @@ import { IoMdCash } from "react-icons/io";
  * @returns FAQ component
  */
 export default function FAQ() {
-  // All FAQs to show
+  // All FAQs to show, this list should be odd
   const faqs = [
     {
       icon: <AiFillCalendar />,
@@ -79,7 +79,7 @@ const Section = styled.section`
       svg {
         font-size: 1.4rem;
       }
-      &:nth-of-type(2) {
+      &:nth-of-type(even) {
         border-top: 0.01rem solid #6c6e6e;
         border-bottom: 0.01rem solid #6c6e6e;
         padding: 0.8rem 0;
