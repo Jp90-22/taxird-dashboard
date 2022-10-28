@@ -161,6 +161,10 @@ const chartData = [
   },
 ];
 
+/**
+ * Earnings styled component
+ * @returns Earnings component
+ */
 export default function Earnings() {
   return (
     <Section>
@@ -193,6 +197,9 @@ export default function Earnings() {
   );
 }
 
+/**
+ * Section styled component
+ */
 const Section = styled.section`
   display: flex;
   flex-direction: column;
