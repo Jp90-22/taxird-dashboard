@@ -35,8 +35,8 @@ export default function FAQ() {
         <h2>Information for drivers</h2>
       </div>
       <div className="faqs">
-        {faqs.map((faq) => (
-          <div className="faq">
+        {faqs.map((faq, idx) => (
+          <div key={idx} className="faq">
             <div className="info">
               {faq.icon}
               <h4>{faq.text}</h4>
