@@ -48,6 +48,10 @@ export default function Sidebar() {
             )}
           </div>
 
+          <div className="logout-btn" title="Logout">
+            <FiLogOut />
+          </div>
+
           <div className="links">
             <ul>
               <li
@@ -198,7 +202,8 @@ const Section = styled.section`
     flex-direction: column;
     gap: 2rem;
     width: 100%;
-    .toggle {
+    .toggle,
+    .logout-btn {
       display: none;
     }
     .brand {
@@ -278,12 +283,22 @@ const Section = styled.section`
       align-items: center;
       justify-content: space-between;
       padding: 0 1rem;
-      .toggle {
-        display: block;
+      .toggle,
+      .logout-btn {
         color: white;
         z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         svg {
           font-size: 1.4rem;
+        }
+      }
+      .logout-btn {
+        padding: 0.3rem;
+        border-radius: 0.6rem;
+        &:hover {
+          background-color: #da0037;
         }
       }
       .brand {
