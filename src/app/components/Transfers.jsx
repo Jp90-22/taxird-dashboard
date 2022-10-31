@@ -141,4 +141,19 @@ const Section = styled.section`
       }
     }
   }
+
+  /* === Media queries === */
+  @media screen and (min-width: 280px) and (max-width: 375px) {
+    .transactions {
+      .transaction {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        &__amount {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
 `;
