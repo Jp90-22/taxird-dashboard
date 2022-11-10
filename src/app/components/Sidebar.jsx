@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import scrollreveal from "scrollreveal";
 
 // Icons
 import { MdSpaceDashboard } from "react-icons/md";
@@ -23,6 +24,46 @@ export default function Sidebar() {
   // Adding onClick event on html element for quit navbar
   const html = document.querySelector("html");
   html.addEventListener("click", () => setShowNavbar(false));
+
+  // Animation effects
+  useEffect(() => {
+    // Links animation
+    const linksReveal = scrollreveal({
+      origin: "left",
+      distance: "80px",
+      duration: 1000,
+      reset: false,
+    });
+
+    linksReveal.reveal(
+      `
+        .brand,
+        .links>ul>li:nth-of-type(1),
+        .links>ul>li:nth-of-type(2),
+        .links>ul>li:nth-of-type(3),
+        .links>ul>li:nth-of-type(4),
+        .links>ul>li:nth-of-type(5),
+        .links>ul>li:nth-of-type(6)
+      `,
+      {
+        opacity: 0,
+        interval: 300,
+      }
+    );
+
+    // Logout animation
+    const logoutReveal = scrollreveal({
+      origin: "bottom",
+      distance: "80px",
+      duration: 1500,
+      reset: false,
+    });
+
+    logoutReveal.reveal(`.logout`, {
+      opacity: 0,
+      interval: 300,
+    });
+  }, []);
 
   return (
     <>

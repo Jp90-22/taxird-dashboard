@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import scrollreveal from "scrollreveal";
 import { Analytics, Earnings, FAQ, Navbar, Profile, Transfer } from "./index";
 
 export default function Dashboard() {
+  // Animation effects
+  useEffect(() => {
+    // Cards animation
+    const cardReveal = scrollreveal({
+      origin: "bottom",
+      distance: "80px",
+      duration: 2000,
+      reset: false,
+    });
+
+    cardReveal.reveal(
+      `
+        nav,
+        .row__one,
+        .row__two
+      `,
+      {
+        opacity: 0,
+        interval: 100,
+      }
+    );
+  }, []);
+
   return (
     <Section>
       <Navbar />
