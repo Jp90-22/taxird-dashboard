@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/taxird-dashboard/static/css/main.2b2407fe.css",
+    "main.js": "/taxird-dashboard/static/js/main.1e340994.js",
+    "static/media/avatarImg1.jpg": "/taxird-dashboard/static/media/avatarImg1.1ac2fee47c7258d2558d.jpg",
+    "static/media/avatarImg2.jpg": "/taxird-dashboard/static/media/avatarImg2.632518746aec5e29d9ba.jpg",
+    "static/media/profile.jpg": "/taxird-dashboard/static/media/profile.85ab58bd2de3a352fcbf.jpg",
+    "index.html": "/taxird-dashboard/index.html",
+    "main.2b2407fe.css.map": "/taxird-dashboard/static/css/main.2b2407fe.css.map",
+    "main.1e340994.js.map": "/taxird-dashboard/static/js/main.1e340994.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b2407fe.css",
+    "static/js/main.1e340994.js"
+  ]
+}
