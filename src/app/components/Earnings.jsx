@@ -178,7 +178,7 @@ export default function Earnings() {
         </div>
       </div>
       <div className="chart">
-        <ResponsiveContainer width="99.6%" height="100%">
+        <ResponsiveContainer width="100%" height="100%">
           <AreaChart width={500} height={400} margin="0" data={chartData}>
             <Tooltip cursor={false} />
             <Area
@@ -235,6 +235,9 @@ const Section = styled.section`
   }
   .chart {
     height: 70%;
+    .recharts-wrapper {
+      position: absolute !important;
+    }
     .recharts-tooltip-wrapper {
       outline: none !important;
     }
